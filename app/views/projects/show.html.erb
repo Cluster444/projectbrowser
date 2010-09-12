@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @project.title %>
+</p>
+
+<p>
+  <b>Length:</b>
+  <%= @project.length %>
+</p>
+
+<p>
+  <b>Id:</b>
+  <%= @project.id %>
+</p>
+
+<p>
+  <b>Work status:</b>
+  <%= @project.work_status %>
+</p>
+
+<p>
+  <b>Date create:</b>
+  <%= @project.date_create %>
+</p>
+
+<p>
+  <b>External identifier:</b>
+  <%= @project.external_identifier %>
+</p>
+
+<p>
+  <b>Uri:</b>
+  <%= @project.uri %>
+</p>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>

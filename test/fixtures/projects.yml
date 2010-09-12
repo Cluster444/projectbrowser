@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  title: MyString
+  length: MyString
+  id: MyString
+  work_status: MyString
+  date_create: 
+  external_identifier: MyString
+  uri: MyString
+
+two:
+  title: MyString
+  length: MyString
+  id: MyString
+  work_status: MyString
+  date_create: 
+  external_identifier: MyString
+  uri: MyString
