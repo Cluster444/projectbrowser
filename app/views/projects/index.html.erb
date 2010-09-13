@@ -1,33 +1,52 @@
-<h1>Listing projects</h1>
+<h1>Projects</h1>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Length</th>
-    <th>Id</th>
-    <th>Work status</th>
-    <th>Date create</th>
-    <th>External identifier</th>
-    <th>Uri</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<table cellpadding="0" cellspacing="0" class="sortable">
+  <thead>
+    <tr>
+        <th></th>
+        <th class="border sortfirstasc text">Title</th>
+        <th class="border">Length</th>
+        <th class="border">Id</th>
+        <th class="border work-status">Work status</th>
+        <th class="border date-us">Date create</th>
+        <th class="border">External identifier</th>
+        <th class="border">Uri</th>
+        <th></th>
+        <!--
+        <th></th>
+        <th></th>
+        -->
+    </tr>
+  </thead>
 
+  <tbody>
 <% @projects.each do |project| %>
-  <tr>
-    <td><%= project.title %></td>
-    <td><%= project.length %></td>
-    <td><%= project.id %></td>
-    <td><%= project.work_status %></td>
-    <td><%= project.date_create %></td>
-    <td><%= project.external_identifier %></td>
-    <td><%= project.uri %></td>
-    <td><%= link_to 'Show', project %></td>
-    <td><%= link_to 'Edit', edit_project_path(project) %></td>
-    <td><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+    <tr>
+        <td valign="top" style="cursor:pointer;" state="closed" onclick="if(this.state == 'open') { this.state = 'closed'; $(this).setStyle({height: '37px'}); $(this).down(2).setStyle({display: 'none'}); $(this).down().innerHTML = '+';} else { this.state = 'open'; $(this).setStyle({height: '150px'});$(this).down(2).setStyle({display: 'block'});$(this).down().innerHTML = '-';};">
+            <span>+</span>
+            <div style="position:relative;">
+                <div style="display:none;position:absolute;width:900px;background:yellow;top:35px;left:8px">
+                    <p>This is the extra content.</p>
+                    <p>This is the extra content.</p>
+                    <p>This is the extra content.</p>
+                </div>
+            </div>
+        </td>
+        <td valign="top"><%= project.title %></td>
+        <td valign="top"><%= project.length %></td>
+        <td valign="top"><%= project.id %></td>
+        <td valign="top" style="white-space:nowrap;"><%= project.work_status %></td>
+        <td valign="top"><%= project.date_create %></td>
+        <td valign="top"><%= project.external_identifier %></td>
+        <td valign="top"><%= project.uri %></td>
+        <td valign="top"><%= link_to 'Details', project %></td>
+        <!--
+        <td valign="top"><%= link_to 'Edit', edit_project_path(project) %></td>
+        <td valign="top"><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
+        -->
+    </tr>
 <% end %>
+  </tbody>
 </table>
 
 <br />

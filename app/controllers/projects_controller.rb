@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  layout "projects"
+  
   # GET /projects
   # GET /projects.xml
   def index
@@ -7,6 +9,7 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @projects }
+      format.json { render :json => @projects }
     end
   end
 
