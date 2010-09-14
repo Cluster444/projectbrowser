@@ -49,3 +49,9 @@ div.field, div.actions {
   font-size: 12px;
   list-style: square;
 }
+/* Manual Table Styling */
+#sortable-table-0, #sortable-table-0 tbody {
+  overflow-y:auto;
+  overflow-x:hidden;
+  height:400px;
+}
