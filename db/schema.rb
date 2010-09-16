@@ -10,19 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100912032837) do
+ActiveRecord::Schema.define(:version => 20100912025417) do
 
   create_table "projects", :force => true do |t|
-    t.string   "title"
-    t.string   "length"
-    t.string   "work_status"
-    t.string   "last_modified"
-    t.string   "date_create"
-    t.string   "external_identifier"
-    t.string   "uri"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "dotsub_id"
+    t.string "title"
+    t.string "length"
+    t.string "uuid"
+    t.string "work_status"
+    t.string "last_modified"
+    t.string "date_created"
+    t.string "external_identifier"
+    t.string "uri"
   end
 
 end
