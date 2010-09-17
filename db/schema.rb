@@ -10,17 +10,40 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100912025417) do
+ActiveRecord::Schema.define(:version => 20100917101648) do
+
+  create_table "project_languages", :force => true do |t|
+    t.string "project_id"
+    t.string "date_created"
+    t.string "description"
+    t.string "language_code"
+    t.string "language_direction"
+    t.string "language_name"
+    t.string "language_name_localized"
+    t.string "last_modified"
+    t.string "percent_complete"
+    t.string "title"
+  end
 
   create_table "projects", :force => true do |t|
-    t.string "title"
-    t.string "length"
-    t.string "uuid"
-    t.string "work_status"
-    t.string "last_modified"
     t.string "date_created"
+    t.string "description"
+    t.string "duration"
     t.string "external_identifier"
-    t.string "uri"
+    t.string "genre"
+    t.string "language"
+    t.string "last_modified"
+    t.string "num_languages"
+    t.string "title"
+    t.string "transcription_status"
+    t.string "user"
+    t.string "uuid"
+    t.string "views"
+    t.string "work_status"
+    t.string "display_uri"
+    t.string "media_uri"
+    t.string "screenshot_uri"
+    t.string "translate_uri"
   end
 
 end
