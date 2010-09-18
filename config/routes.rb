@@ -1,5 +1,6 @@
 Projbrowser::Application.routes.draw do
   resources :projects
+  resources :project_languages
 
   get "home/index"
 

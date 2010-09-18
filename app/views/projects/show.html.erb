@@ -1,13 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Title:</b>
-  <%= @project.title %>
+  <h1><%= @project.title %></h1>
 </p>
+<%= image_tag @project.screenshot_uri %>
 
 <p>
   <b>Length:</b>
-  <%= @project.length %>
+  <%= @project.duration.to_i / 1000 / 60 %>:<%= @project.duration.to_i / 1000 % 60 %>
 </p>
 
 <p>
@@ -22,12 +22,12 @@
 
 <p>
   <b>Date created:</b>
-  <%= @project.date_created %>
+  <%= Time.at @project.date_created.to_i / 1000 %>
 </p>
 
 <p>
   <b>Last Modified:</b>
-  <%= @project.last_modified %>
+  <%= Time.at @project.last_modified.to_i / 1000 %>
 </p>
 
 <p>
@@ -36,10 +36,18 @@
 </p>
 
 <p>
-  <b>Uri:</b>
-  <%= @project.uri %>
+  <b>Media URI</b>
+  <%= link_to @project.media_uri, @project.media_uri %>
 </p>
 
+<p>
+  <b>Translate URI</b>
+  <%= link_to @project.translate_uri, @project.translate_uri %>
+</p>
 
-<%= link_to 'Edit', edit_project_path(@project) %> |
+<p>
+  <b>Display URI</b>
+  <%= link_to @project.display_uri, @project.display_uri %>
+</p>
+
 <%= link_to 'Back', projects_path %>

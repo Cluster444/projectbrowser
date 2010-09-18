@@ -16,7 +16,7 @@ class ProjectsController < ApplicationController
   # GET /projects/1
   # GET /projects/1.xml
   def show
-    @project = Project.find(params[:id])
+    @project = Project.find_by_uuid(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -60,7 +60,7 @@ class ProjectsController < ApplicationController
   # PUT /projects/1
   # PUT /projects/1.xml
   def update
-    @project = Project.find(params[:id])
+    @project = Project.find(params[:uuid])
 
     respond_to do |format|
       if @project.update_attributes(params[:project])

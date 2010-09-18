@@ -1,0 +1,20 @@
+<table>
+  <tr>
+    <th>Title</th>
+    <th>UUID</th>
+    <th>Language</th>
+    <th>Completion</th>
+    <th>Last Modified</th>
+  </tr>
+
+<% @project_languages.each do |project_language| %>
+  <tr>
+    <td><%= project_language.title %></td>
+    <td><%= project_language.project_id %></td>
+    <td><%= project_language.language_name %></td>
+    <td><%= project_language.percent_complete %>%</td>
+    <td><%= project_language.last_modified %></td>
+  </tr>
+<% end %>
+</table>
+

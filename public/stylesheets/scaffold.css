@@ -51,7 +51,9 @@ div.field, div.actions {
 }
 /* Manual Table Styling */
 #sortable-table-0, #sortable-table-0 tbody {
+/* Not XBrowser Compatible
   overflow-y:auto;
   overflow-x:hidden;
   height:400px;
+*/
 }

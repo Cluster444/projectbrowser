@@ -6,21 +6,10 @@
         <th></th>
         <th class="border sortfirstasc text">Title</th>
         <th class="border">Length</th>
-	<!--
-        <th class="border">UUID</th>
-	-->
         <th class="border work-status">Work status</th>
         <th class="border date-us">Date Created</th>
         <th class="border date-us">Last Modified</th>
-	<!--
-        <th class="border">External Reference</th>
-        <th class="border">Uri</th>
-	-->
         <th></th>
-        <!--
-        <th></th>
-        <th></th>
-        -->
     </tr>
   </thead>
 
@@ -38,27 +27,14 @@
             </div>
         </td>
         <td valign="top"><%= project.title %></td>
-        <td valign="top"><%= project.length %></td>
-	<!--
-        <td valign="top"><%= project.uuid %></td>
-	-->
+        <td valign="top"><%= project.duration %></td>
         <td valign="top" style="white-space:nowrap;"><%= project.work_status %></td>
         <td valign="top"><%= project.date_created %></td>
         <td valign="top"><%= project.last_modified %></td>
+	<td valign="top"><%= link_to "Details", project_path(project) %></td>
 	<!--
-        <td valign="top"><%= project.external_identifier %></td>
-        <td valign="top"><%= project.uri %></td>
 	-->
-        <td valign="top"><%= link_to 'Details', project %></td>
-        <!--
-        <td valign="top"><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td valign="top"><%= link_to 'Destroy', project, :confirm => 'Are you sure?', :method => :delete %></td>
-        -->
     </tr>
 <% end %>
   </tbody>
 </table>
-
-<br />
-
-<%= link_to 'New Project', new_project_path %>
